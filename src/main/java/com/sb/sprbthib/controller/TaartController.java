@@ -9,6 +9,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/taartinator")
 public class TaartController {
@@ -30,6 +32,12 @@ public class TaartController {
     public ResponseEntity<Taart> getTaartById(@PathVariable("id") Integer id) {
         Taart trt = taartService.getTaartById(id);
         return new ResponseEntity<Taart>(trt, HttpStatus.OK);
+    }
+
+    @GetMapping("/taarten")
+    public ResponseEntity<List<Taart>> getAllTaarten() {
+        List<Taart> list = taartService.getAllTaarten();
+        return new ResponseEntity<List<Taart>>(list, HttpStatus.OK);
     }
 
     @PutMapping("/taart")

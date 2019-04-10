@@ -5,6 +5,8 @@ import com.sb.sprbthib.entity.Taart;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class TaartService implements ITaartService {
 
@@ -24,6 +26,11 @@ public class TaartService implements ITaartService {
     @Override
     public Taart getTaartById(int taartId) {
         return taartDAO.getTaartById(taartId);
+    }
+
+    @Override
+    public List<Taart> getAllTaarten() {
+        return taartDAO.getAllTaarten();
     }
 
     @Override

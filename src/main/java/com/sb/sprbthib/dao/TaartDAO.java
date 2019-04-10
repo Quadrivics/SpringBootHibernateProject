@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Transactional
 @Repository
@@ -28,6 +29,12 @@ public class TaartDAO implements ITaartDAO {
                 .getResultList()
                 .size();
         return count > 0;
+    }
+
+    @Override
+    public List<Taart> getAllTaarten() {
+        String query = "select t from Taarten t order by t.naam";
+        return (List<Taart>) entityManager.createQuery(query).getResultList();
     }
 
     @Override
