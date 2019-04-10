@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "a4e8a785-ab98-4f16-b901-a8229be27e62",
+		"name": "Taart-JPA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/taartinator/taart/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Appeltaart\",\n\t\"description\" : \"Een taart met appels.\",\n\t\"owner\": \"Serge Bosman\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/taartinator/taart/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"taartinator",
+						"taart",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/taartinator/taart/ copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Appelkruimeltaart\",\n\t\"description\" : \"Een taart met appel en een kruimelige structuur.\",\n\t\"owner\": \"Serge Bosman\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/taartinator/taart/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"taartinator",
+						"taart",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/taartinator/taart/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/taartinator/taart/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"taartinator",
+						"taart",
+						"1"
+					]
+				},
+				"description": "A specific application id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/taartinator/taarten/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/taartinator/taarten/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"taartinator",
+						"taarten",
+						""
+					]
+				},
+				"description": "list all applications"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/tza/application/",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 1,\n\t\"name\": \"TaartNieuw\",\n\t\"description\": \"De nieuwe taartomschrijving\",\n    \"owner\": \"De taartmeneer\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/taartinator/taart/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"taartinator",
+						"taart",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/tza/application/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/taartinator/taart/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"taartinator",
+						"taart",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
